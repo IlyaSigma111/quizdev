@@ -6,104 +6,95 @@
 <title>QuizKit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23ff3300'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8e4de' font-weight='700'>Q</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23ff3300'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23fff' font-weight='800'>Q</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.5}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#f5f5f5;line-height:1.5}
 ::selection{background:#ff3300;color:#fff}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
-/* nav */
-nav{background:#1a1a1a;color:#e8e4de;border-bottom:3px solid #ff3300;position:sticky;top:0;z-index:100}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-size:22px;font-weight:700;letter-spacing:-1px}
-.nav-logo span{background:#ff3300;color:#fff;padding:0 6px}
-.nav-links{display:flex;align-items:center;gap:20px}
-.nav-links a{font-size:11px;font-weight:700;text-transform:uppercase;transition:color .15s;cursor:pointer}
-.nav-links a:hover{color:#ff3300}
-.nav-links .nav-btn{background:#e8e4de;color:#1a1a1a;padding:6px 16px;font-size:11px;font-family:inherit;border:none;cursor:pointer;transition:.15s}
-.nav-links .nav-btn:hover{background:#fff;color:#1a1a1a}
+nav{background:#0a0a0a;border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.nav-logo span{color:#ff3300}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:13px;font-weight:600;color:#888;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-btn{background:#fff;color:#0a0a0a;padding:8px 20px;font-size:13px;font-weight:700;border:none;border-radius:6px;cursor:pointer;font-family:inherit;transition:opacity .2s}
+.nav-btn:hover{opacity:.85}
 
-/* hero */
-.hero{padding:100px 0 70px;text-align:center}
-.hero-label{display:inline-block;padding:5px 14px;background:#1a1a1a;color:#e8e4de;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:22px}
-.hero h1{font-size:clamp(42px,7vw,78px);font-weight:700;line-height:.92;letter-spacing:-2px;text-transform:uppercase;margin-bottom:22px;max-width:700px;margin-left:auto;margin-right:auto}
-.hero h1 span{background:#ff3300;color:#fff;padding:0 8px}
-.hero p{font-size:14px;color:#444;line-height:1.55;margin:0 auto 28px;max-width:500px}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
-.hero-btns a{display:inline-flex;align-items:center;gap:6px;padding:12px 28px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a;cursor:pointer;transition:all .15s}
-.hero-btns .btn-primary{background:#1a1a1a;color:#e8e4de}
-.hero-btns .btn-primary:hover{background:#ff3300;border-color:#ff3300}
-.hero-btns .btn-secondary{background:transparent;color:#1a1a1a}
-.hero-btns .btn-secondary:hover{background:#1a1a1a;color:#e8e4de}
-.hero-stats{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
-.hero-stats span{font-size:11px;color:#555;font-weight:700;text-transform:uppercase;padding-left:14px;border-left:3px solid #ff3300}
-.hero-stats span:first-child{border-left:none;padding-left:0}
+.hero{padding:120px 0 80px;text-align:center}
+.hero-badge{display:inline-block;padding:6px 14px;background:rgba(255,51,0,.12);color:#ff3300;font-size:12px;font-weight:700;border-radius:6px;margin-bottom:24px}
+.hero h1{font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
+.hero h1 span{color:#ff3300}
+.hero p{font-size:16px;color:#888;line-height:1.6;max-width:480px;margin:0 auto 32px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;font-size:14px;font-weight:700;border:none;border-radius:8px;cursor:pointer;font-family:inherit;transition:all .2s}
+.btn-primary{background:#ff3300;color:#fff}
+.btn-primary:hover{background:#e62e00;transform:translateY(-1px)}
+.btn-secondary{background:#1a1a1a;color:#fff}
+.btn-secondary:hover{background:#2a2a2a;transform:translateY(-1px)}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin-top:40px;padding-top:40px;border-top:1px solid #1a1a1a}
+.hero-stats div{text-align:center}
+.hero-stats .num{font-size:28px;font-weight:800;color:#fff;display:block}
+.hero-stats .lbl{font-size:12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
 
-/* catalog */
-section{padding:64px 0}
-section.dark{background:#1a1a1a;color:#e8e4de}
-.section-label{display:inline-block;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:16px}
-section:not(.dark) .section-label{background:#1a1a1a;color:#e8e4de}
-section.dark .section-label{background:#ff3300;color:#fff}
-.section-title{font-size:clamp(22px,2.5vw,32px);font-weight:700;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:8px}
-.section-desc{font-size:13px;color:#555}
+section{padding:80px 0}
+.section-title{font-size:clamp(20px,2.2vw,28px);font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.section-desc{font-size:14px;color:#888;margin-bottom:32px}
 
-.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.app-card{border:3px solid #1a1a1a;background:#fff;display:flex;flex-direction:column;transition:outline .15s;cursor:pointer}
-.app-card:hover{outline:3px solid #ff3300;outline-offset:-3px}
-.app-card-body{padding:24px;flex:1;display:flex;flex-direction:column;gap:8px}
-.app-card-icon{width:28px;height:28px;margin-bottom:4px}
-.app-card-name{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
-.app-card-desc{font-size:11px;color:#444;line-height:1.45}
-.app-card-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:2px}
-.app-card-tag{padding:3px 8px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a}
-.app-card-tag.filled{background:#1a1a1a;color:#e8e4de}
-.app-card-sub{font-size:10px;color:#666;padding:4px 10px;background:#e8e4de;border:2px solid #1a1a1a;display:inline-block;margin-top:2px}
-.app-card-foot{padding:12px 20px;border-top:3px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;background:#e8e4de}
-.app-card-ver{font-size:10px;color:#666}
-.app-card-ver a{text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.app-card{background:#111;border:1px solid #222;border-radius:12px;padding:28px;display:flex;flex-direction:column;transition:all .2s}
+.app-card:hover{border-color:#ff3300;transform:translateY(-2px)}
+.app-card-name{font-size:18px;font-weight:700;margin:12px 0 8px}
+.app-card-desc{font-size:13px;color:#888;line-height:1.5;margin-bottom:12px;flex:1}
+.app-card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.app-card-tag{padding:4px 10px;background:rgba(255,51,0,.1);color:#ff3300;font-size:11px;font-weight:600;border-radius:4px}
+.app-card-foot{border-top:1px solid #222;padding-top:16px;margin-top:auto}
+.app-card-row{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.app-card-ver{font-size:12px;color:#555;font-weight:600}
+.app-card-ver a{color:#888;text-decoration:underline;text-underline-offset:2px}
 .app-card-ver a:hover{color:#ff3300}
-.app-card-dl{display:flex;gap:4px}
-.app-card-dl a{padding:6px 12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;border:2px solid #1a1a1a;cursor:pointer;transition:all .15s}
-.app-dl-portable{background:transparent;color:#1a1a1a}
-.app-dl-portable:hover{background:#1a1a1a;color:#e8e4de}
-.app-dl-setup{background:#1a1a1a;color:#e8e4de}
-.app-dl-setup:hover{background:#ff3300;border-color:#ff3300;color:#fff}
+.app-card-dl{display:flex;gap:6px}
+.app-card-dl a{padding:8px 16px;font-size:12px;font-weight:700;border-radius:6px;font-family:inherit;cursor:pointer;transition:all .2s}
+.app-dl-portable{background:#1a1a1a;color:#fff}
+.app-dl-portable:hover{background:#2a2a2a}
+.app-dl-setup{background:#ff3300;color:#fff}
+.app-dl-setup:hover{background:#e62e00}
+.app-card-sub{font-size:11px;color:#666;padding:4px 10px;background:rgba(255,255,255,.05);border-radius:4px;display:inline-block;margin-bottom:12px}
+.app-card-icon{width:40px;height:40px;padding:8px;background:rgba(255,51,0,.12);border-radius:8px}
+.app-card-icon svg{width:24px;height:24px;stroke:#ff3300}
 
-/* faq */
-.faq-list{margin-top:28px;max-width:640px}
-.faq-item{border-bottom:2px solid #333}
-.faq-q{width:100%;padding:14px 0;background:none;border:none;color:#e8e4de;font-size:12px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;transition:color .15s}
+#faq{background:#0d0d0d}
+.faq-list{max-width:640px}
+.faq-item{border-bottom:1px solid #1a1a1a}
+.faq-q{width:100%;padding:18px 0;background:none;border:none;color:#f5f5f5;font-size:15px;font-weight:600;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;transition:color .2s}
 .faq-q:hover{color:#ff3300}
-.faq-q .arr{color:#555;flex-shrink:0}
-.faq-item.open .faq-q .arr{color:#ff3300}
-.faq-a{padding:0 0 14px;color:#999;font-size:11px;line-height:1.55;display:none}
+.faq-q .arr{color:#555;flex-shrink:0;font-size:14px;transition:transform .2s}
+.faq-item.open .faq-q .arr{transform:rotate(180deg)}
+.faq-a{padding:0 0 18px;color:#888;font-size:14px;line-height:1.6;display:none}
 .faq-item.open .faq-a{display:block}
 
-/* cta */
-.cta{text-align:center;padding:64px 0}
-.cta h2{font-size:clamp(24px,3vw,36px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;margin-bottom:8px}
-.cta p{font-size:12px;color:#555;margin-bottom:20px}
-.cta a{display:inline-flex;align-items:center;gap:6px;padding:12px 32px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a;background:#1a1a1a;color:#e8e4de;cursor:pointer;transition:all .15s}
-.cta a:hover{background:#ff3300;border-color:#ff3300;color:#fff}
+.cta{text-align:center;padding:80px 0}
+.cta h2{font-size:clamp(24px,2.8vw,36px);font-weight:800;letter-spacing:-.5px;margin-bottom:10px}
+.cta p{font-size:15px;color:#888;margin-bottom:28px}
 
-/* footer */
-footer{padding:20px 0;border-top:3px solid #ff3300}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-footer,footer a{font-size:10px;color:#666;text-transform:uppercase}
-footer a{text-decoration:underline;text-underline-offset:2px;cursor:pointer;transition:color .15s}
-footer a:hover{color:#1a1a1a}
-.footer-links{display:flex;gap:12px}
+footer{padding:24px 0;border-top:1px solid #1a1a1a}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+footer,footer a{font-size:12px;color:#555;font-weight:600}
+footer a{transition:color .2s}
+footer a:hover{color:#fff}
+.footer-links{display:flex;gap:16px}
 
 @media(max-width:900px){
   .apps-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:660px){
   .apps-grid{grid-template-columns:1fr}
+  .hero-stats{gap:24px}
   footer .wrap{flex-direction:column;text-align:center}
 }
 </style>
@@ -114,8 +105,8 @@ footer a:hover{color:#1a1a1a}
 <div class="wrap nav-inner">
   <a href="#" class="nav-logo"><span>Q</span>UIZKIT</a>
   <div class="nav-links">
-    <a href="#apps">/apps</a>
-    <a href="#faq">/faq</a>
+    <a href="#apps">Приложения</a>
+    <a href="#faq">FAQ</a>
     <a href="https://github.com/IlyaSigma111" class="nav-btn">GITHUB</a>
   </div>
 </div>
@@ -123,99 +114,101 @@ footer a:hover{color:#1a1a1a}
 
 <section class="hero">
 <div class="wrap">
-  <div class="hero-label">FREE / OPEN SOURCE</div>
-  <h1><span>ТРИ</span> ИГРЫ — ОДИН КЛИК</h1>
-  <p>QuizKit — платформа для викторин под Windows. Выбери приложение, скачай и играй без интернета.</p>
+  <div class="hero-badge">Бесплатно · Открытый код · Windows</div>
+  <h1>Три игры.<br><span>Один клик.</span></h1>
+  <p>QuizKit — платформа для викторин. Скачай игру, запусти и играй без интернета.</p>
   <div class="hero-btns">
-    <a href="#apps" class="btn-primary">↓ СМОТРЕТЬ ВСЕ</a>
-    <a href="https://github.com/IlyaSigma111" class="btn-secondary">GITHUB →</a>
+    <a href="#apps" class="btn btn-primary">↓ Смотреть приложения</a>
+    <a href="https://github.com/IlyaSigma111" class="btn btn-secondary">Github →</a>
   </div>
   <div class="hero-stats">
-    <span>3 приложения</span>
-    <span>1000+ вопросов</span>
-    <span>Полный офлайн</span>
-    <span>Open source</span>
+    <div><span class="num">3</span><span class="lbl">Приложения</span></div>
+    <div><span class="num">1000+</span><span class="lbl">Вопросов</span></div>
+    <div><span class="num">100%</span><span class="lbl">Офлайн</span></div>
+    <div><span class="num">✓</span><span class="lbl">Open source</span></div>
   </div>
 </div>
 </section>
 
 <section id="apps">
 <div class="wrap">
-  <div class="section-label">01 / КАТАЛОГ</div>
-  <h2 class="section-title">Приложения QuizKit</h2>
+  <h2 class="section-title">Приложения</h2>
   <p class="section-desc">Самостоятельные игры под Windows. Без регистраций и подписок.</p>
   <div class="apps-grid">
+
     <div class="app-card">
-      <div class="app-card-body">
-        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-        <div class="app-card-name">ИльЯкласс</div>
-        <div class="app-card-desc">Викторины в классе. Учитель запускает .exe — ученики подключаются по QR-коду через браузер.</div>
-        <div class="app-card-tags">
-          <span class="app-card-tag filled">Класс</span>
-          <span class="app-card-tag">QR-код</span>
-          <span class="app-card-tag">Статистика</span>
-        </div>
+      <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+      <div class="app-card-name">ИльЯкласс</div>
+      <div class="app-card-desc">Викторины в классе. Учитель запускает .exe — ученики подключаются по QR-коду через браузер. Работает в локальной сети.</div>
+      <div class="app-card-tags">
+        <span class="app-card-tag">Класс</span>
+        <span class="app-card-tag">QR-код</span>
+        <span class="app-card-tag">Статистика</span>
       </div>
       <div class="app-card-foot">
-        <span class="app-card-ver">v0.6.8 / <a href="https://github.com/IlyaSigma111/quizkit">github →</a></span>
-        <div class="app-card-dl">
-          <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/ilya-klass.exe" class="app-dl-portable">portable</a>
-          <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/IlyaKlass_0.6.8_x64-setup.exe" class="app-dl-setup">setup</a>
+        <div class="app-card-row">
+          <span class="app-card-ver">v0.6.8 · <a href="https://github.com/IlyaSigma111/quizkit">github →</a></span>
+          <div class="app-card-dl">
+            <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/ilya-klass.exe" class="app-dl-portable">Portable</a>
+            <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/IlyaKlass_0.6.8_x64-setup.exe" class="app-dl-setup">Setup</a>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="app-card">
-      <div class="app-card-body">
-        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <div class="app-card-name">Своя Игра</div>
-        <div class="app-card-desc">Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор вопросов и полноэкранный режим.</div>
-        <div class="app-card-tags">
-          <span class="app-card-tag filled">Jeopardy</span>
-          <span class="app-card-tag">1000+ шаблонов</span>
-          <span class="app-card-tag">До 6 игроков</span>
-        </div>
+      <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <div class="app-card-name">Своя Игра</div>
+      <div class="app-card-desc">Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор вопросов и полноэкранный режим для проектора.</div>
+      <div class="app-card-tags">
+        <span class="app-card-tag">Jeopardy</span>
+        <span class="app-card-tag">1000+ шаблонов</span>
+        <span class="app-card-tag">До 6 игроков</span>
       </div>
       <div class="app-card-foot">
-        <span class="app-card-ver">v0.4.0 / <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></span>
-        <div class="app-card-dl">
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">portable</a>
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup">setup</a>
+        <div class="app-card-row">
+          <span class="app-card-ver">v0.4.0 · <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></span>
+          <div class="app-card-dl">
+            <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">Portable</a>
+            <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup">Setup</a>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="app-card">
-      <div class="app-card-body">
-        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <div class="app-card-name">Миллионер</div>
-        <div class="app-card-desc">15 вопросов, 50:50, несгораемые суммы, лестница призов. Режим внутри «Своей Игры».</div>
-        <div class="app-card-tags">
-          <span class="app-card-tag filled">50:50</span>
-          <span class="app-card-tag">Одиночный</span>
-          <span class="app-card-tag">Группа</span>
-        </div>
-        <span class="app-card-sub">в составе «Своей Игры»</span>
+      <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="app-card-name">Миллионер</div>
+      <div class="app-card-desc">15 вопросов с нарастающей сложностью, 50:50, несгораемые суммы, лестница призов. Режим внутри «Своей Игры».</div>
+      <div class="app-card-tags">
+        <span class="app-card-tag">50:50</span>
+        <span class="app-card-tag">Одиночный</span>
+        <span class="app-card-tag">Группа</span>
       </div>
+      <span class="app-card-sub">в составе «Своей Игры»</span>
       <div class="app-card-foot">
-        <span class="app-card-ver">v0.4.0 / <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></span>
-        <div class="app-card-dl">
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">portable</a>
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup">setup</a>
+        <div class="app-card-row">
+          <span class="app-card-ver">v0.4.0 · <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></span>
+          <div class="app-card-dl">
+            <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">Portable</a>
+            <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup">Setup</a>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 </section>
 
-<section id="faq" class="dark">
+<section id="faq">
 <div class="wrap">
-  <div class="section-label">02 / FAQ</div>
   <h2 class="section-title">Часто задаваемые вопросы</h2>
   <p class="section-desc">Коротко и по делу.</p>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-q">Сколько это стоит? <span class="arr">▾</span></button><div class="faq-a">Всё бесплатно. Все приложения с открытым исходным кодом — скачивай, используй, изменяй как хочешь.</div></div>
     <div class="faq-item"><button class="faq-q">Нужен интернет? <span class="arr">▾</span></button><div class="faq-a">«Своя Игра» и «Миллионер» работают полностью офлайн. «ИльЯкласс» создаёт локальный сервер в Wi-Fi сети.</div></div>
-    <div class="faq-item"><button class="faq-q">Portable или Setup? <span class="arr">▾</span></button><div class="faq-a">Portable — один .exe, запускается с любого места. Setup — установщик с иконкой в меню Пуск.</div></div>
+    <div class="faq-item"><button class="faq-q">Portable или Setup? <span class="arr">▾</span></button><div class="faq-a">Portable — один .exe, запускается с любого места (флешка, папка). Setup — установщик с иконкой в меню Пуск. Функционально одинаковы.</div></div>
     <div class="faq-item"><button class="faq-q">Будет macOS / Linux? <span class="arr">▾</span></button><div class="faq-a">Планируется. Пока все приложения собраны только под Windows x64.</div></div>
   </div>
 </div>
@@ -223,15 +216,15 @@ footer a:hover{color:#1a1a1a}
 
 <section class="cta">
 <div class="wrap">
-  <h2>ГОТОВ НАЧАТЬ?</h2>
+  <h2>Готов начать?</h2>
   <p>Скачай любую игру и начни играть через минуту</p>
-  <a href="#apps">↓ К ПРИЛОЖЕНИЯМ</a>
+  <a href="#apps" class="btn btn-primary">↓ К приложениям</a>
 </div>
 </section>
 
 <footer>
 <div class="wrap">
-  <span>QuizKit / платформа для викторин с открытым кодом</span>
+  <span>QuizKit — платформа для викторин с открытым кодом</span>
   <div class="footer-links">
     <a href="https://github.com/IlyaSigma111">github</a>
     <a href="https://github.com/IlyaSigma111/quizkit/issues">support</a>
