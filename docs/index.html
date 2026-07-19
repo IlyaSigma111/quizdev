@@ -11,104 +11,100 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.4;-webkit-font-smoothing:antialiased}
 ::selection{background:#ff3300;color:#fff}
-
-.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+img,svg{max-width:100%;vertical-align:middle}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
 /* nav */
-nav{background:#1a1a1a;color:#e8e4de;border-bottom:4px solid #ff3300}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{font-size:24px;font-weight:700;letter-spacing:-1px;color:#e8e4de;text-decoration:none}
-.nav-logo span{background:#ff3300;color:#fff;padding:0 8px}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-right a{font-size:13px;font-weight:700;color:#e8e4de;text-decoration:none;text-transform:uppercase}
+nav{background:#1a1a1a;color:#e8e4de;border-bottom:3px solid #ff3300}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{font-size:20px;font-weight:700;letter-spacing:-1px;color:#e8e4de;text-decoration:none}
+.nav-logo span{background:#ff3300;color:#fff;padding:0 6px}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-right a{font-size:11px;font-weight:700;color:#e8e4de;text-decoration:none;text-transform:uppercase}
 .nav-right a:hover{color:#ff3300}
-.nav-btn{background:#e8e4de;color:#1a1a1a;padding:8px 20px;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:inherit}
+.nav-btn{background:#e8e4de;color:#1a1a1a;padding:6px 16px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:inherit}
 
 /* hero */
-.hero{padding:120px 0 90px}
-.hero-badge{display:inline-block;padding:6px 16px;background:#1a1a1a;color:#e8e4de;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:30px}
-.hero h1{font-size:clamp(48px,8vw,90px);font-weight:700;line-height:1;letter-spacing:-2px;text-transform:uppercase;margin-bottom:30px}
-.hero h1 span{background:#ff3300;color:#fff;padding:0 8px}
-.hero p{font-size:15px;color:#444;max-width:560px;line-height:1.6;margin-bottom:30px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:3px solid #1a1a1a}
+.hero{padding:64px 0 56px}
+.hero-badge{display:inline-block;padding:4px 12px;background:#1a1a1a;color:#e8e4de;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:20px}
+.hero h1{font-size:clamp(40px,7vw,80px);font-weight:700;line-height:.95;letter-spacing:-2px;text-transform:uppercase;margin-bottom:20px}
+.hero h1 span{background:#ff3300;color:#fff;padding:0 6px}
+.hero p{font-size:13px;color:#444;max-width:520px;line-height:1.5;margin-bottom:20px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:2px solid #1a1a1a}
 .btn-primary{background:#1a1a1a;color:#e8e4de}
 .btn-primary:hover{background:#ff3300;border-color:#ff3300}
 .btn-secondary{background:transparent;color:#1a1a1a}
 .btn-secondary:hover{background:#1a1a1a;color:#e8e4de}
-.hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px}
-.hero-stats span{font-size:12px;color:#555;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding-left:16px;border-left:4px solid #ff3300}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}
+.hero-stats span{font-size:10px;color:#555;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding-left:12px;border-left:3px solid #ff3300}
 
 /* sections */
-section{padding:90px 0}
+section{padding:56px 0}
 section.dark{background:#1a1a1a;color:#e8e4de}
-.section-label{display:inline-block;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:22px}
+.section-label{display:inline-block;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:14px}
 section:not(.dark) .section-label{background:#1a1a1a;color:#e8e4de}
 section.dark .section-label{background:#ff3300;color:#fff}
-.section-title{font-size:clamp(24px,3vw,36px);font-weight:700;text-transform:uppercase;letter-spacing:-.5px;line-height:1.15;margin-bottom:12px}
-.section-desc{font-size:14px;line-height:1.55;max-width:500px}
-section:not(.dark) .section-desc{color:#444}
+.section-title{font-size:clamp(20px,2.5vw,30px);font-weight:700;text-transform:uppercase;letter-spacing:-.5px;line-height:1.15;margin-bottom:8px}
+.section-desc{font-size:12px;line-height:1.5;max-width:480px}
+section:not(.dark) .section-desc{color:#555}
 section.dark .section-desc{color:#999}
 
-/* apps grid */
-.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.app-card{border:4px solid #1a1a1a;background:#fff;display:flex;flex-direction:column}
-.app-card:hover{outline:4px solid #ff3300;outline-offset:-4px}
-.app-card-body{padding:28px;display:flex;flex-direction:column;gap:12px;flex:1}
-.app-card-icon{font-size:42px;line-height:1}
-.app-card-name{font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
-.app-card-desc{font-size:13px;color:#444;line-height:1.5}
-.app-card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-.app-card-tag{padding:4px 10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a}
+/* apps */
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.app-card{border:3px solid #1a1a1a;background:#fff;display:flex;flex-direction:column}
+.app-card:hover{outline:3px solid #ff3300;outline-offset:-3px}
+.app-card-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.app-card-icon{font-size:32px;line-height:1}
+.app-card-name{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
+.app-card-desc{font-size:11px;color:#444;line-height:1.45}
+.app-card-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:2px}
+.app-card-tag{padding:3px 8px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a}
 .app-card-tag.filled{background:#1a1a1a;color:#e8e4de}
-.app-card-sub{font-size:11px;color:#666;padding:6px 12px;background:#e8e4de;border:2px solid #1a1a1a;display:inline-block;margin-top:4px}
-.app-card-foot{padding:16px 28px;border-top:4px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#e8e4de}
-.app-card-ver{font-size:11px;color:#666}
+.app-card-sub{font-size:10px;color:#666;padding:4px 10px;background:#e8e4de;border:2px solid #1a1a1a;display:inline-block;margin-top:2px}
+.app-card-foot{padding:12px 20px;border-top:3px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#e8e4de}
+.app-card-ver{font-size:10px;color:#666}
 .app-card-ver a{color:#1a1a1a;text-decoration:underline;text-underline-offset:2px}
-.app-card-dl{display:flex;gap:6px}
-.app-card-dl a{padding:8px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;cursor:pointer;border:3px solid #1a1a1a;text-decoration:none}
+.app-card-dl{display:flex;gap:4px}
+.app-card-dl a{padding:6px 12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;cursor:pointer;border:2px solid #1a1a1a;text-decoration:none}
 .app-dl-portable{background:transparent;color:#1a1a1a}
 .app-dl-portable:hover{background:#1a1a1a;color:#e8e4de}
 .app-dl-setup{background:#1a1a1a;color:#e8e4de}
 .app-dl-setup:hover{background:#ff3300;border-color:#ff3300;color:#fff}
 
 /* faq */
-.faq-list{max-width:700px;margin-top:40px}
+.faq-list{max-width:680px;margin-top:28px}
 .faq-item{border-bottom:2px solid #333}
-.faq-q{width:100%;padding:20px 0;background:none;border:none;color:#e8e4de;font-size:14px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;letter-spacing:.2px}
+.faq-q{width:100%;padding:14px 0;background:none;border:none;color:#e8e4de;font-size:12px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;letter-spacing:.2px}
 .faq-q:hover{color:#ff3300}
-.faq-q .arr{color:#555;flex-shrink:0;font-size:12px}
+.faq-q .arr{color:#555;flex-shrink:0;font-size:11px}
 .faq-item.open .faq-q .arr{color:#ff3300}
-.faq-a{padding:0 0 24px;color:#999;font-size:13px;line-height:1.6;display:none}
+.faq-a{padding:0 0 16px;color:#999;font-size:11px;line-height:1.55;display:none}
 .faq-item.open .faq-a{display:block}
 
 /* cta */
-.cta{text-align:center;padding:90px 0}
-.cta h2{font-size:clamp(26px,3.5vw,42px);font-weight:700;text-transform:uppercase;letter-spacing:-1.5px;margin-bottom:10px}
-.cta p{font-size:14px;color:#444;margin-bottom:30px}
-.cta .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 40px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:3px solid #1a1a1a;background:#1a1a1a;color:#e8e4de}
+.cta{text-align:center;padding:56px 0 64px}
+.cta h2{font-size:clamp(22px,3vw,36px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;margin-bottom:8px}
+.cta p{font-size:12px;color:#555;margin-bottom:20px}
+.cta .btn{display:inline-flex;align-items:center;gap:6px;padding:12px 32px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:2px solid #1a1a1a;background:#1a1a1a;color:#e8e4de}
 .cta .btn:hover{background:#ff3300;border-color:#ff3300;color:#fff}
 
 /* footer */
-footer{padding:24px 0;border-top:4px solid #ff3300}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer,footer a{font-size:12px;color:#666;text-transform:uppercase;letter-spacing:.3px}
+footer{padding:20px 0;border-top:3px solid #ff3300}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+footer,footer a{font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.3px}
 footer a{text-decoration:underline;text-underline-offset:2px}
 footer a:hover{color:#1a1a1a}
-.footer-links{display:flex;gap:16px}
+.footer-links{display:flex;gap:12px}
 
 @media(max-width:900px){
   .apps-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:660px){
   .apps-grid{grid-template-columns:1fr}
-  .hero-stats{gap:24px}
-  .hero-stats span{padding-left:12px}
-  .app-card-foot{flex-direction:column;align-items:stretch}
-  .app-card-dl{justify-content:stretch}
-  .app-card-dl a{flex:1;justify-content:center}
+  .hero-stats{gap:16px}
   footer .wrap{flex-direction:column;text-align:center}
 }
 </style>
@@ -148,14 +144,14 @@ footer a:hover{color:#1a1a1a}
 <div class="wrap">
   <div class="section-label">01 / КАТАЛОГ</div>
   <h2 class="section-title">Приложения QuizKit</h2>
-  <p class="section-desc">Самостоятельные игры под Windows. Никаких регистраций, подписок и лишних слоёв.</p>
+  <p class="section-desc">Самостоятельные игры под Windows. Без регистраций и подписок.</p>
   <div class="apps-grid">
 
     <div class="app-card">
       <div class="app-card-body">
         <div class="app-card-icon">📚</div>
         <div class="app-card-name">ИльЯкласс</div>
-        <div class="app-card-desc">Викторины и проверочные работы в классе. Учитель запускает .exe — ученики подключаются по QR-коду через браузер.</div>
+        <div class="app-card-desc">Викторины в классе. Учитель запускает .exe — ученики подключаются по QR-коду через браузер.</div>
         <div class="app-card-tags">
           <span class="app-card-tag filled">Класс</span>
           <span class="app-card-tag">QR-код</span>
@@ -175,7 +171,7 @@ footer a:hover{color:#1a1a1a}
       <div class="app-card-body">
         <div class="app-card-icon">🎯</div>
         <div class="app-card-name">Своя Игра</div>
-        <div class="app-card-desc">Классическая Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор вопросов и полноэкранный режим.</div>
+        <div class="app-card-desc">Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор вопросов и полноэкранный режим.</div>
         <div class="app-card-tags">
           <span class="app-card-tag filled">Jeopardy</span>
           <span class="app-card-tag">1000+ шаблонов</span>
@@ -194,8 +190,8 @@ footer a:hover{color:#1a1a1a}
     <div class="app-card">
       <div class="app-card-body">
         <div class="app-card-icon">💰</div>
-        <div class="app-card-name">Кто хочет стать миллионером</div>
-        <div class="app-card-desc">15 вопросов с нарастающей сложностью, 50:50, несгораемые суммы, лестница призов и уход в любой момент. Режим внутри «Своей Игры».</div>
+        <div class="app-card-name">Миллионер</div>
+        <div class="app-card-desc">15 вопросов, 50:50, несгораемые суммы, лестница призов. Режим внутри «Своей Игры».</div>
         <div class="app-card-tags">
           <span class="app-card-tag filled">50:50</span>
           <span class="app-card-tag">Одиночный</span>
@@ -223,8 +219,8 @@ footer a:hover{color:#1a1a1a}
   <p class="section-desc">Коротко и по делу.</p>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-q">Сколько это стоит? <span class="arr">▾</span></button><div class="faq-a">Всё бесплатно. Все приложения с открытым исходным кодом — скачивай, используй, изменяй как хочешь.</div></div>
-    <div class="faq-item"><button class="faq-q">Нужен интернет? <span class="arr">▾</span></button><div class="faq-a">«Своя Игра» и «Миллионер» работают полностью офлайн. «ИльЯкласс» создаёт локальный сервер в твоей Wi-Fi сети.</div></div>
-    <div class="faq-item"><button class="faq-q">Portable или Setup? <span class="arr">▾</span></button><div class="faq-a">Portable — один .exe, запускается с любого места (флешка, папка). Setup — установщик с иконкой в меню Пуск. Функционально одинаковы.</div></div>
+    <div class="faq-item"><button class="faq-q">Нужен интернет? <span class="arr">▾</span></button><div class="faq-a">«Своя Игра» и «Миллионер» работают полностью офлайн. «ИльЯкласс» создаёт локальный сервер в Wi-Fi сети.</div></div>
+    <div class="faq-item"><button class="faq-q">Portable или Setup? <span class="arr">▾</span></button><div class="faq-a">Portable — один .exe, запускается с любого места. Setup — установщик с иконкой в меню Пуск.</div></div>
     <div class="faq-item"><button class="faq-q">Будет macOS / Linux? <span class="arr">▾</span></button><div class="faq-a">Планируется. Пока все приложения собраны только под Windows x64.</div></div>
   </div>
 </div>
