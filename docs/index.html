@@ -7,105 +7,104 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FFFF00'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23000' font-weight='700'>Q</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23ff3300'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8e4de' font-weight='700'>Q</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Mono',monospace;background:#000;color:#fff;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:underline;text-underline-offset:4px}
+body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
 a:hover{opacity:.7}
-::selection{background:#00f;color:#fff}
+::selection{background:#ff3300;color:#fff}
 
 /* ─── layout ─── */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
 /* ─── nav ─── */
-nav{border-bottom:3px solid #fff;padding:20px 0;margin-bottom:0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-size:24px;font-weight:700;text-decoration:none;letter-spacing:-1px}
-.nav-logo:hover{opacity:1}
-.nav-logo span{background:#ff0;color:#000;padding:2px 8px}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-right a{font-size:13px;text-decoration:none;font-weight:700}
-.nav-right a:hover{opacity:.7}
-.nav-right .btn{background:#fff;color:#000;padding:8px 20px;font-size:12px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
+nav{background:#1a1a1a;color:#e8e4de;margin-bottom:0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-size:22px;font-weight:700;letter-spacing:-1px;color:#e8e4de}
+.nav-logo span{background:#ff3300;color:#fff;padding:0 6px;margin-right:2px}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-right a{font-size:12px;font-weight:700;color:#e8e4de}
+.nav-right a:hover{color:#ff3300}
+.nav-right .btn{background:#e8e4de;color:#1a1a1a;padding:8px 18px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:inherit;box-shadow:3px 3px 0 #ff3300}
+.nav-right .btn:active{box-shadow:none;transform:translate(3px,3px)}
 
 /* ─── hero ─── */
-.hero{padding:100px 0 80px;border-bottom:3px solid #fff}
-.hero-badge{display:inline-block;padding:4px 12px;background:#00f;color:#fff;font-size:11px;font-weight:700;margin-bottom:32px;text-transform:uppercase;letter-spacing:1px}
-.hero h1{font-size:clamp(48px,10vw,120px);font-weight:700;line-height:.9;letter-spacing:-4px;text-transform:uppercase;max-width:900px}
-.hero h1 span{background:#ff0;color:#000;padding:0 8px}
-.hero p{font-size:16px;color:#888;max-width:600px;margin-top:20px;line-height:1.5;font-weight:400}
+.hero{padding:100px 0 80px;background:#e8e4de}
+.hero-badge{display:inline-block;padding:4px 12px;background:#1a1a1a;color:#e8e4de;font-size:10px;font-weight:700;margin-bottom:28px;letter-spacing:1px}
+.hero h1{font-size:clamp(48px,10vw,110px);font-weight:700;line-height:.88;letter-spacing:-4px;text-transform:uppercase;max-width:900px;color:#1a1a1a}
+.hero h1 span{background:#ff3300;color:#fff;padding:0 8px;box-shadow:6px 6px 0 #1a1a1a}
+.hero p{font-size:15px;color:#444;max-width:580px;margin-top:24px;line-height:1.5}
 .hero-btns{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
-.hero-btns .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
-.hero-btns .btn-primary{background:#ff0;color:#000}
-.hero-btns .btn-primary:hover{opacity:.8}
-.hero-btns .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
-.hero-btns .btn-secondary:hover{background:#fff;color:#000}
+.hero-btns .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px}
+.hero-btns .btn-primary{background:#1a1a1a;color:#e8e4de;box-shadow:5px 5px 0 #ff3300}
+.hero-btns .btn-primary:active{box-shadow:none;transform:translate(5px,5px)}
+.hero-btns .btn-secondary{background:transparent;color:#1a1a1a;border:2px solid #1a1a1a}
+.hero-btns .btn-secondary:hover{background:#1a1a1a;color:#e8e4de}
 .hero-stats{display:flex;gap:48px;margin-top:48px;flex-wrap:wrap}
-.hero-stats span{font-size:12px;color:#666;display:flex;align-items:center;gap:6px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.hero-stats span::before{content:'▸';color:#ff0;font-size:14px}
+.hero-stats span{font-size:11px;color:#666;display:flex;align-items:center;gap:6px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.hero-stats span::before{content:'▸';color:#ff3300;font-size:13px}
 
 /* ─── sections ─── */
-section{padding:80px 0;border-bottom:3px solid #fff}
-section:last-of-type{border-bottom:none}
-.section-label{display:inline-block;padding:4px 12px;background:#ff0;color:#000;font-size:11px;font-weight:700;margin-bottom:24px;text-transform:uppercase;letter-spacing:1px}
-.section-title{font-size:clamp(24px,3.5vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;line-height:1.1;margin-bottom:12px}
-.section-desc{color:#888;font-size:14px;max-width:500px;line-height:1.5}
+section{padding:80px 0}
+.section-label{display:inline-block;padding:4px 12px;background:#1a1a1a;color:#e8e4de;font-size:10px;font-weight:700;margin-bottom:24px;letter-spacing:1px}
+.section-title{font-size:clamp(24px,3.5vw,44px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;line-height:1.1;margin-bottom:12px;color:#1a1a1a}
+.section-desc{color:#444;font-size:14px;max-width:500px;line-height:1.5}
 
 /* ─── apps ─── */
-.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:44px}
-.app-card{border:3px solid #fff;padding:0;display:flex;flex-direction:column}
-.app-card:hover{border-color:#ff0}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:44px}
+.app-card{background:#e8e4de;border:3px solid #1a1a1a;padding:0;display:flex;flex-direction:column;box-shadow:7px 7px 0 #1a1a1a;transition:all .1s}
+.app-card:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 #1a1a1a}
 .app-card-top{padding:28px 28px 0;display:flex;flex-direction:column;gap:12px}
-.app-card-icon{font-size:48px;line-height:1;margin-bottom:4px}
-.app-card-name{font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:-.5px}
-.app-card-desc{font-size:13px;color:#888;line-height:1.5}
+.app-card-icon{font-size:44px;line-height:1;margin-bottom:2px}
+.app-card-name{font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
+.app-card-desc{font-size:12px;color:#444;line-height:1.55}
 .app-card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-.app-card-tag{padding:4px 10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:1px solid #333;color:#666}
-.app-card-tag.highlight{border-color:#ff0;color:#ff0}
-.app-card-foot{margin-top:20px;padding:16px 28px;border-top:2px solid #222;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.app-card-ver{font-size:11px;color:#666;font-weight:400}
-.app-card-ver a{color:#888}
+.app-card-tag{padding:4px 10px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a;color:#1a1a1a}
+.app-card-tag.highlight{background:#1a1a1a;color:#e8e4de}
+.app-card-foot{margin-top:20px;padding:16px 28px;border-top:2px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.app-card-ver{font-size:10px;color:#666;font-weight:400}
+.app-card-ver a{text-decoration:underline;text-underline-offset:3px;color:#1a1a1a}
 .app-card-dl{display:flex;gap:6px}
-.app-card-dl a{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;font-size:11px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;cursor:pointer}
-.app-card-dl-portable{background:transparent;color:#fff;border:2px solid #fff}
-.app-card-dl-portable:hover{background:#fff;color:#000;opacity:1}
-.app-card-dl-setup{background:#fff;color:#000;border:2px solid #fff}
-.app-card-dl-setup:hover{opacity:.8}
-.app-card-dl-setup.yellow{background:#ff0;border-color:#ff0;color:#000}
-.app-card-dl-setup.red{background:#00f;border-color:#00f;color:#fff}
-.app-card-dl-setup.magenta{background:#ff0;border-color:#ff0;color:#000}
-.app-card-sub{font-size:11px;color:#555;margin-top:4px}
+.app-card-dl a{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;cursor:pointer}
+.app-card-dl-portable{background:transparent;color:#1a1a1a;border:2px solid #1a1a1a;box-shadow:3px 3px 0 #1a1a1a}
+.app-card-dl-portable:active{box-shadow:none;transform:translate(3px,3px)}
+.app-card-dl-setup{color:#e8e4de;border:2px solid #1a1a1a;background:#1a1a1a;box-shadow:3px 3px 0 #1a1a1a}
+.app-card-dl-setup:active{box-shadow:none;transform:translate(3px,3px)}
+.app-card-sub{font-size:10px;color:#888;margin-top:4px;padding:6px 12px;background:#d8d4ce;display:inline-block}
 
-/* ─── FAQ styling ─── */
+/* ─── FAQ ─── */
+.faq-section{background:#1a1a1a;color:#e8e4de}
+.faq-section .section-label{background:#ff3300;color:#fff}
+.faq-section .section-title{color:#e8e4de}
+.faq-section .section-desc{color:#999}
 .faq-list{max-width:700px;margin-top:40px}
-.faq-item{border-bottom:2px solid #222}
-.faq-q{width:100%;padding:20px 0;background:none;border:none;color:#fff;font-size:14px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;letter-spacing:.3px}
-.faq-q:hover{color:#ff0}
-.faq-q .arrow{font-size:12px;color:#555;transition:none;flex-shrink:0}
-.faq-item.open .faq-q .arrow{color:#ff0}
-.faq-a{padding:0 0 22px;color:#888;font-size:13px;line-height:1.6;display:none}
+.faq-item{border-bottom:2px solid #333}
+.faq-q{width:100%;padding:20px 0;background:none;border:none;color:#e8e4de;font-size:13px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;letter-spacing:.3px}
+.faq-q:hover{color:#ff3300}
+.faq-q .arrow{font-size:11px;color:#555;flex-shrink:0}
+.faq-item.open .faq-q .arrow{color:#ff3300}
+.faq-a{padding:0 0 22px;color:#999;font-size:12px;line-height:1.6;display:none}
 .faq-item.open .faq-a{display:block}
 
 /* ─── cta ─── */
-.cta{padding:100px 0 80px;text-align:center}
-.cta h2{font-size:clamp(28px,4vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:-2px;line-height:1.05;margin-bottom:16px}
-.cta p{color:#888;font-size:14px;margin-bottom:28px}
-.cta .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:inherit;background:#ff0;color:#000}
-.cta .btn:hover{opacity:.8}
+.cta{padding:100px 0 80px;text-align:center;background:#ff3300;color:#fff}
+.cta h2{font-size:clamp(28px,4vw,52px);font-weight:700;text-transform:uppercase;letter-spacing:-2px;line-height:1.05;margin-bottom:12px}
+.cta p{color:rgba(255,255,255,.8);font-size:14px;margin-bottom:28px}
+.cta .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;background:#1a1a1a;color:#e8e4de;text-transform:uppercase;letter-spacing:.5px;box-shadow:5px 5px 0 rgba(0,0,0,.3)}
+.cta .btn:active{box-shadow:none;transform:translate(5px,5px)}
 
 /* ─── footer ─── */
-footer{border-top:3px solid #fff;padding:24px 0;margin-top:0}
+footer{background:#1a1a1a;color:#555;padding:24px 0}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer,footer a{color:#555;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-footer a{text-decoration:underline;text-underline-offset:3px}
-footer a:hover{color:#fff}
+footer a{color:#888;text-decoration:underline;text-underline-offset:3px}
+footer a:hover{color:#e8e4de}
 .footer-links{display:flex;gap:16px}
 
 @media(max-width:768px){
   .nav-right a:not(.btn){display:none}
-  .hero-stats{gap:24px}
+  .hero-stats{gap:20px}
   .app-card-foot{flex-direction:column;align-items:flex-start}
   footer .wrap{flex-direction:column;text-align:center}
 }
@@ -126,9 +125,9 @@ footer a:hover{color:#fff}
 
 <section class="hero">
 <div class="wrap">
-  <div class="hero-badge">FREE // OPEN SOURCE</div>
+  <div class="hero-badge">FREE / OPEN SOURCE</div>
   <h1><span>ТРИ</span> ИГРЫ<br>ОДИН КЛИК</h1>
-  <p>QuizKit — платформа для викторин и квизов под Windows. Выбери приложение, скачай и играй без интернета. Всё бесплатно.</p>
+  <p>QuizKit — платформа для викторин под Windows. Выбери приложение, скачай и играй без интернета. Всё бесплатно.</p>
   <div class="hero-btns">
     <a href="#apps" class="btn btn-primary">↓ СМОТРЕТЬ ВСЕ</a>
     <a href="https://github.com/IlyaSigma111" class="btn btn-secondary">GITHUB →</a>
@@ -144,7 +143,7 @@ footer a:hover{color:#fff}
 
 <section id="apps">
 <div class="wrap">
-  <div class="section-label">01 // КАТАЛОГ</div>
+  <div class="section-label">01 / КАТАЛОГ</div>
   <h2 class="section-title">Приложения QuizKit</h2>
   <p class="section-desc">Каждое приложение — самостоятельная игра. Никаких регистраций, подписок и лишних слоёв.</p>
   <div class="apps-grid">
@@ -164,7 +163,7 @@ footer a:hover{color:#fff}
         <div class="app-card-ver">v0.6.8 / <a href="https://github.com/IlyaSigma111/quizkit">github →</a></div>
         <div class="app-card-dl">
           <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/ilya-klass.exe" class="app-card-dl-portable">[ portable ]</a>
-          <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/IlyaKlass_0.6.8_x64-setup.exe" class="app-card-dl-setup yellow">[ setup ]</a>
+          <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/IlyaKlass_0.6.8_x64-setup.exe" class="app-card-dl-setup">[ setup ]</a>
         </div>
       </div>
     </div>
@@ -184,7 +183,7 @@ footer a:hover{color:#fff}
         <div class="app-card-ver">v0.4.0 / <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></div>
         <div class="app-card-dl">
           <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-card-dl-portable">[ portable ]</a>
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-card-dl-setup red">[ setup ]</a>
+          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-card-dl-setup">[ setup ]</a>
         </div>
       </div>
     </div>
@@ -193,7 +192,7 @@ footer a:hover{color:#fff}
       <div class="app-card-top">
         <div class="app-card-icon">💰</div>
         <div class="app-card-name">Кто хочет стать миллионером</div>
-        <div class="app-card-desc">15 вопросов с нарастающей сложностью, подсказка 50:50, несгораемые суммы 5 000 и 100 000, лестница призов и уход в любой момент. Режим внутри «Своей Игры».</div>
+        <div class="app-card-desc">15 вопросов с нарастающей сложностью, подсказка 50:50, несгораемые суммы, лестница призов и уход в любой момент. Режим внутри «Своей Игры».</div>
         <div class="app-card-tags">
           <span class="app-card-tag highlight">50:50</span>
           <span class="app-card-tag">Одиночный</span>
@@ -205,7 +204,7 @@ footer a:hover{color:#fff}
         <div class="app-card-ver">v0.4.0 / <a href="https://github.com/IlyaSigma111/svoya-igra">github →</a></div>
         <div class="app-card-dl">
           <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-card-dl-portable">[ portable ]</a>
-          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-card-dl-setup magenta">[ setup ]</a>
+          <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-card-dl-setup">[ setup ]</a>
         </div>
       </div>
     </div>
@@ -214,10 +213,11 @@ footer a:hover{color:#fff}
 </div>
 </section>
 
-<section id="faq">
+<section id="faq" class="faq-section">
 <div class="wrap">
-  <div class="section-label">02 // FAQ</div>
+  <div class="section-label">02 / FAQ</div>
   <h2 class="section-title">Часто задаваемые вопросы</h2>
+  <p class="section-desc">Коротко и по делу.</p>
   <div class="faq-list">
     <div class="faq-item"><button class="faq-q">Сколько это стоит? <span class="arrow">▾</span></button><div class="faq-a">Всё бесплатно. Все приложения с открытым исходным кодом — скачивай, используй, изменяй как хочешь.</div></div>
     <div class="faq-item"><button class="faq-q">Нужен интернет? <span class="arrow">▾</span></button><div class="faq-a">«Своя Игра» и «Миллионер» работают полностью офлайн. «ИльЯкласс» создаёт локальный сервер в твоей Wi-Fi сети.</div></div>
@@ -237,7 +237,7 @@ footer a:hover{color:#fff}
 
 <footer>
 <div class="wrap">
-  <div>QuizKit // платформа для викторин с открытым кодом</div>
+  <div>QuizKit / платформа для викторин с открытым кодом</div>
   <div class="footer-links">
     <a href="https://github.com/IlyaSigma111">github</a>
     <a href="https://github.com/IlyaSigma111/quizkit/issues">support</a>
