@@ -11,93 +11,92 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.4;-webkit-font-smoothing:antialiased}
+body{font-family:'Space Mono',monospace;background:#e8e4de;color:#1a1a1a;line-height:1.5}
 ::selection{background:#ff3300;color:#fff}
-img,svg{max-width:100%;vertical-align:middle}
+a{color:inherit;text-decoration:none}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
-/* nav */
+/* ─── nav ─── */
 nav{background:#1a1a1a;color:#e8e4de;border-bottom:3px solid #ff3300}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-size:20px;font-weight:700;letter-spacing:-1px;color:#e8e4de;text-decoration:none}
+.nav-logo{font-size:22px;font-weight:700;letter-spacing:-1px;color:#e8e4de}
 .nav-logo span{background:#ff3300;color:#fff;padding:0 6px}
-.nav-right{display:flex;align-items:center;gap:18px}
-.nav-right a{font-size:11px;font-weight:700;color:#e8e4de;text-decoration:none;text-transform:uppercase}
-.nav-right a:hover{color:#ff3300}
-.nav-btn{background:#e8e4de;color:#1a1a1a;padding:6px 16px;font-size:11px;font-weight:700;border:none;cursor:pointer;font-family:inherit}
+.nav-links{display:flex;align-items:center;gap:16px}
+.nav-links a{font-size:12px;font-weight:700;text-transform:uppercase;transition:color .15s;cursor:pointer}
+.nav-links a:hover{color:#ff3300}
+.nav-links .nav-btn{background:#e8e4de;color:#1a1a1a;padding:6px 16px;font-size:11px;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:opacity .15s}
+.nav-links .nav-btn:hover{opacity:.8;color:#1a1a1a}
 
-/* hero */
-.hero{padding:64px 0 56px}
-.hero-badge{display:inline-block;padding:4px 12px;background:#1a1a1a;color:#e8e4de;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:20px}
-.hero h1{font-size:clamp(40px,7vw,80px);font-weight:700;line-height:.95;letter-spacing:-2px;text-transform:uppercase;margin-bottom:20px}
+/* ─── hero ─── */
+.hero{padding:80px 0 56px}
+.hero-label{display:inline-block;padding:4px 12px;background:#1a1a1a;color:#e8e4de;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:20px}
+.hero h1{font-size:clamp(44px,7vw,80px);font-weight:700;line-height:.95;letter-spacing:-2px;text-transform:uppercase;margin-bottom:20px}
 .hero h1 span{background:#ff3300;color:#fff;padding:0 6px}
-.hero p{font-size:13px;color:#444;max-width:520px;line-height:1.5;margin-bottom:20px}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:2px solid #1a1a1a}
-.btn-primary{background:#1a1a1a;color:#e8e4de}
-.btn-primary:hover{background:#ff3300;border-color:#ff3300}
-.btn-secondary{background:transparent;color:#1a1a1a}
-.btn-secondary:hover{background:#1a1a1a;color:#e8e4de}
-.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}
-.hero-stats span{font-size:10px;color:#555;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding-left:12px;border-left:3px solid #ff3300}
+.hero p{font-size:14px;color:#444;line-height:1.5;margin-bottom:24px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.hero-btns a{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a;cursor:pointer;transition:all .15s}
+.hero-btns .btn-primary{background:#1a1a1a;color:#e8e4de}
+.hero-btns .btn-primary:hover{background:#ff3300;border-color:#ff3300}
+.hero-btns .btn-secondary{background:transparent;color:#1a1a1a}
+.hero-btns .btn-secondary:hover{background:#1a1a1a;color:#e8e4de}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap}
+.hero-stats span{font-size:11px;color:#555;font-weight:700;text-transform:uppercase;padding-left:14px;border-left:3px solid #ff3300}
 
-/* sections */
-section{padding:56px 0}
+/* ─── catalog ─── */
+section{padding:60px 0}
 section.dark{background:#1a1a1a;color:#e8e4de}
-.section-label{display:inline-block;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:14px}
+.section-label{display:inline-block;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:16px}
 section:not(.dark) .section-label{background:#1a1a1a;color:#e8e4de}
 section.dark .section-label{background:#ff3300;color:#fff}
-.section-title{font-size:clamp(20px,2.5vw,30px);font-weight:700;text-transform:uppercase;letter-spacing:-.5px;line-height:1.15;margin-bottom:8px}
-.section-desc{font-size:12px;line-height:1.5;max-width:480px}
-section:not(.dark) .section-desc{color:#555}
-section.dark .section-desc{color:#999}
+.section-title{font-size:clamp(22px,2.5vw,32px);font-weight:700;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:8px}
+.section-desc{font-size:13px;color:#555;margin-bottom:0}
 
-/* apps */
-.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-.app-card{border:3px solid #1a1a1a;background:#fff;display:flex;flex-direction:column}
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.app-card{border:3px solid #1a1a1a;background:#fff;display:flex;flex-direction:column;transition:outline .15s;cursor:pointer}
 .app-card:hover{outline:3px solid #ff3300;outline-offset:-3px}
-.app-card-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.app-card-icon{font-size:32px;line-height:1}
-.app-card-name{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
-.app-card-desc{font-size:11px;color:#444;line-height:1.45}
-.app-card-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:2px}
+.app-card-body{padding:24px;flex:1;display:flex;flex-direction:column;gap:8px}
+.app-card-icon{width:32px;height:32px;margin-bottom:2px}
+.app-card-name{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:-.3px}
+.app-card-desc{font-size:12px;color:#444;line-height:1.45}
+.app-card-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
 .app-card-tag{padding:3px 8px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a}
 .app-card-tag.filled{background:#1a1a1a;color:#e8e4de}
 .app-card-sub{font-size:10px;color:#666;padding:4px 10px;background:#e8e4de;border:2px solid #1a1a1a;display:inline-block;margin-top:2px}
-.app-card-foot{padding:12px 20px;border-top:3px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#e8e4de}
+.app-card-foot{padding:14px 24px;border-top:3px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#e8e4de}
 .app-card-ver{font-size:10px;color:#666}
-.app-card-ver a{color:#1a1a1a;text-decoration:underline;text-underline-offset:2px}
+.app-card-ver a{text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.app-card-ver a:hover{color:#ff3300}
 .app-card-dl{display:flex;gap:4px}
-.app-card-dl a{padding:6px 12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;cursor:pointer;border:2px solid #1a1a1a;text-decoration:none}
+.app-card-dl a{padding:6px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:inherit;border:2px solid #1a1a1a;cursor:pointer;transition:all .15s}
 .app-dl-portable{background:transparent;color:#1a1a1a}
 .app-dl-portable:hover{background:#1a1a1a;color:#e8e4de}
 .app-dl-setup{background:#1a1a1a;color:#e8e4de}
 .app-dl-setup:hover{background:#ff3300;border-color:#ff3300;color:#fff}
 
-/* faq */
-.faq-list{max-width:680px;margin-top:28px}
+/* ─── faq ─── */
+.faq-list{margin-top:32px;max-width:680px}
 .faq-item{border-bottom:2px solid #333}
-.faq-q{width:100%;padding:14px 0;background:none;border:none;color:#e8e4de;font-size:12px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;letter-spacing:.2px}
+.faq-q{width:100%;padding:16px 0;background:none;border:none;color:#e8e4de;font-size:13px;font-weight:700;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;text-transform:uppercase;transition:color .15s}
 .faq-q:hover{color:#ff3300}
-.faq-q .arr{color:#555;flex-shrink:0;font-size:11px}
+.faq-q .arr{color:#555;flex-shrink:0;transition:color .15s}
 .faq-item.open .faq-q .arr{color:#ff3300}
-.faq-a{padding:0 0 16px;color:#999;font-size:11px;line-height:1.55;display:none}
+.faq-a{padding:0 0 20px;color:#999;font-size:12px;line-height:1.6;display:none}
 .faq-item.open .faq-a{display:block}
 
-/* cta */
-.cta{text-align:center;padding:56px 0 64px}
-.cta h2{font-size:clamp(22px,3vw,36px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;margin-bottom:8px}
-.cta p{font-size:12px;color:#555;margin-bottom:20px}
-.cta .btn{display:inline-flex;align-items:center;gap:6px;padding:12px 32px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;border:2px solid #1a1a1a;background:#1a1a1a;color:#e8e4de}
-.cta .btn:hover{background:#ff3300;border-color:#ff3300;color:#fff}
+/* ─── cta ─── */
+.cta{text-align:center;padding:60px 0}
+.cta h2{font-size:clamp(24px,3vw,38px);font-weight:700;text-transform:uppercase;letter-spacing:-1px;margin-bottom:8px}
+.cta p{font-size:13px;color:#555;margin-bottom:24px}
+.cta a{display:inline-flex;align-items:center;gap:6px;padding:14px 36px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:2px solid #1a1a1a;background:#1a1a1a;color:#e8e4de;cursor:pointer;transition:all .15s}
+.cta a:hover{background:#ff3300;border-color:#ff3300;color:#fff}
 
-/* footer */
+/* ─── footer ─── */
 footer{padding:20px 0;border-top:3px solid #ff3300}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-footer,footer a{font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.3px}
-footer a{text-decoration:underline;text-underline-offset:2px}
+footer,footer a{font-size:11px;color:#666;text-transform:uppercase}
+footer a{text-decoration:underline;text-underline-offset:2px;cursor:pointer;transition:color .15s}
 footer a:hover{color:#1a1a1a}
-.footer-links{display:flex;gap:12px}
+.footer-links{display:flex;gap:14px}
 
 @media(max-width:900px){
   .apps-grid{grid-template-columns:repeat(2,1fr)}
@@ -114,7 +113,7 @@ footer a:hover{color:#1a1a1a}
 <nav>
 <div class="wrap nav-inner">
   <a href="#" class="nav-logo"><span>Q</span>UIZKIT</a>
-  <div class="nav-right">
+  <div class="nav-links">
     <a href="#apps">/apps</a>
     <a href="#faq">/faq</a>
     <a href="https://github.com/IlyaSigma111" class="nav-btn">GITHUB</a>
@@ -124,12 +123,12 @@ footer a:hover{color:#1a1a1a}
 
 <section class="hero">
 <div class="wrap">
-  <div class="hero-badge">FREE / OPEN SOURCE</div>
+  <div class="hero-label">FREE / OPEN SOURCE</div>
   <h1><span>ТРИ</span> ИГРЫ<br>ОДИН КЛИК</h1>
   <p>QuizKit — платформа для викторин под Windows. Выбери приложение, скачай и играй без интернета. Всё бесплатно.</p>
   <div class="hero-btns">
-    <a href="#apps" class="btn btn-primary">↓ СМОТРЕТЬ ВСЕ</a>
-    <a href="https://github.com/IlyaSigma111" class="btn btn-secondary">GITHUB →</a>
+    <a href="#apps" class="btn-primary">↓ СМОТРЕТЬ ВСЕ</a>
+    <a href="https://github.com/IlyaSigma111" class="btn-secondary">GITHUB →</a>
   </div>
   <div class="hero-stats">
     <span>3 приложения</span>
@@ -149,7 +148,7 @@ footer a:hover{color:#1a1a1a}
 
     <div class="app-card">
       <div class="app-card-body">
-        <div class="app-card-icon">📚</div>
+        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
         <div class="app-card-name">ИльЯкласс</div>
         <div class="app-card-desc">Викторины в классе. Учитель запускает .exe — ученики подключаются по QR-коду через браузер.</div>
         <div class="app-card-tags">
@@ -169,7 +168,7 @@ footer a:hover{color:#1a1a1a}
 
     <div class="app-card">
       <div class="app-card-body">
-        <div class="app-card-icon">🎯</div>
+        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         <div class="app-card-name">Своя Игра</div>
         <div class="app-card-desc">Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор вопросов и полноэкранный режим.</div>
         <div class="app-card-tags">
@@ -189,7 +188,7 @@ footer a:hover{color:#1a1a1a}
 
     <div class="app-card">
       <div class="app-card-body">
-        <div class="app-card-icon">💰</div>
+        <svg class="app-card-icon" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         <div class="app-card-name">Миллионер</div>
         <div class="app-card-desc">15 вопросов, 50:50, несгораемые суммы, лестница призов. Режим внутри «Своей Игры».</div>
         <div class="app-card-tags">
@@ -230,7 +229,7 @@ footer a:hover{color:#1a1a1a}
 <div class="wrap">
   <h2>ГОТОВ НАЧАТЬ?</h2>
   <p>Скачай любую игру и начни играть через минуту</p>
-  <a href="#apps" class="btn">↓ К ПРИЛОЖЕНИЯМ</a>
+  <a href="#apps">↓ К ПРИЛОЖЕНИЯМ</a>
 </div>
 </section>
 
