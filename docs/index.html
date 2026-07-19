@@ -47,46 +47,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rg
 .btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.14);transform:translateY(-2px)}
 
 section{padding:100px 24px;position:relative;z-index:1}
-.section-inner{max-width:1000px;margin:0 auto}
+.section-inner{max-width:1100px;margin:0 auto}
 .section-label{font-size:12px;font-weight:600;color:#6366F1;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
 .section-title{font-size:clamp(26px,3.5vw,40px);font-weight:700;letter-spacing:-1px;line-height:1.15;margin-bottom:14px;color:#e8e8f0}
 .section-desc{color:#7878a0;font-size:15px;max-width:550px;line-height:1.6}
 
 .glass{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;transition:all .3s cubic-bezier(.4,0,.2,1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .glass:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-.glass-icon{width:44px;height:44px;border-radius:12px;background:rgba(99,102,241,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px;border:1px solid rgba(99,102,241,.1)}
-.glass-icon svg{width:20px;height:20px;color:#a5b4fc}
 
-.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:40px}
-.app-card{padding:36px 28px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;position:relative;overflow:hidden}
+/* ─── App cards ─── */
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:40px}
+.app-card{padding:32px 28px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
 .app-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
 .app-card.primary::before{background:linear-gradient(90deg,#6366F1,#10B981)}
 .app-card.rose::before{background:linear-gradient(90deg,#F43F5E,#F97316)}
 .app-card.amber::before{background:linear-gradient(90deg,#F59E0B,#D97706)}
-.app-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none}
+.app-card-top{display:flex;align-items:flex-start;gap:16px}
+.app-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
 .app-icon.purple{background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.2));border:1px solid rgba(99,102,241,.2)}
 .app-icon.rose{background:linear-gradient(135deg,rgba(244,63,94,.2),rgba(249,115,22,.2));border:1px solid rgba(244,63,94,.2)}
 .app-icon.amber{background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(255,68,119,.2));border:1px solid rgba(245,158,11,.2)}
+.app-info{flex:1;min-width:0}
 .app-name{font-size:20px;font-weight:700;color:#e8e8f0}
-.app-desc{font-size:13px;color:#7878a0;line-height:1.5;flex:1}
-.app-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.app-version{font-size:12px;color:#6868a0;margin-top:2px}
+.app-desc{font-size:13px;color:#7878a0;line-height:1.5;margin-top:4px}
+.app-tags{display:flex;gap:6px;flex-wrap:wrap}
 .app-tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.04);color:#7878a0;border:1px solid rgba(255,255,255,.05)}
-.app-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px}
-.app-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;transition:all .2s;border:none;font-family:inherit;cursor:pointer}
-.app-btn-primary{background:#6366F1;color:#fff}
-.app-btn-primary:hover{background:#5558e6;transform:translateY(-2px);box-shadow:0 6px 20px rgba(99,102,241,.25)}
-.app-btn-rose{background:#F43F5E;color:#fff}
-.app-btn-rose:hover{background:#e11d48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(244,63,94,.25)}
-.app-btn-amber{background:linear-gradient(135deg,#F59E0B,#ff4477);color:#fff}
-.app-btn-amber:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(245,158,11,.25)}
-.app-btn-outline{background:transparent;color:#7878a0;border:1px solid rgba(255,255,255,.08)}
-.app-btn-outline:hover{color:#e8e8f0;border-color:rgba(255,255,255,.15)}
-.app-vers{font-size:11px;color:#6868a0}
-
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-top:40px}
-.feature-card{padding:32px 24px}
-.feature-card h3{font-size:15px;font-weight:600;margin-bottom:4px;color:#e8e8f0}
-.feature-card p{color:#7878a0;font-size:13px;line-height:1.5}
+.app-dl{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.app-dl a{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:all .2s;font-family:inherit;cursor:pointer;text-decoration:none}
+.app-dl-portable{background:rgba(255,255,255,.06);color:#e8e8f0;border:1px solid rgba(255,255,255,.08)}
+.app-dl-portable:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.14);transform:translateY(-2px)}
+.app-dl-setup{color:#fff}
+.app-dl-setup.primary{background:#6366F1}
+.app-dl-setup.primary:hover{background:#5558e6;transform:translateY(-2px);box-shadow:0 6px 20px rgba(99,102,241,.25)}
+.app-dl-setup.rose{background:#F43F5E}
+.app-dl-setup.rose:hover{background:#e11d48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(244,63,94,.25)}
+.app-dl-setup.amber{background:linear-gradient(135deg,#F59E0B,#ff4477)}
+.app-dl-setup.amber:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(245,158,11,.25)}
+.app-dl-size{font-size:11px;color:#6868a0;display:inline}
+.app-gh-link{font-size:12px;color:#7878a0}
+.app-gh-link:hover{color:#a5b4fc}
 
 .faq-list{max-width:660px;margin-top:36px;display:flex;flex-direction:column}
 .faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
@@ -101,7 +101,7 @@ section{padding:100px 24px;position:relative;z-index:1}
 .cta h2{font-size:clamp(26px,3.5vw,38px);font-weight:700;margin-bottom:10px}
 .cta p{color:#7878a0;margin-bottom:28px;font-size:15px}
 
-footer{padding:40px 24px;border-top:1px solid rgba(255,255,255,.05);max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:#5858a0;font-size:12px;position:relative;z-index:1}
+footer{padding:40px 24px;border-top:1px solid rgba(255,255,255,.05);max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:#5858a0;font-size:12px;position:relative;z-index:1}
 footer a{color:#7878a0;transition:color .2s}
 footer a:hover{color:#e8e8f0}
 .footer-links{display:flex;gap:16px}
@@ -109,6 +109,9 @@ footer a:hover{color:#e8e8f0}
 @media(max-width:768px){
   .nav-right a:not(.btn){display:none}
   .hero-stats{flex-direction:column;gap:12px;align-items:center}
+  .app-card-top{flex-direction:column;align-items:center;text-align:center}
+  .app-tags{justify-content:center}
+  .app-dl{justify-content:center}
   footer{flex-direction:column;text-align:center}
 }
 </style>
@@ -138,7 +141,7 @@ footer a:hover{color:#e8e8f0}
 <section class="hero">
   <div class="hero-badge">Платформа для викторин</div>
   <h1>Три игры — один клик</h1>
-  <p>QuizKit объединяет настольные викторины и классные квизы. Выберите приложение, скачайте и играйте без интернета.</p>
+  <p>QuizKit объединяет настольные викторины и классные квизы. Выберите приложение, скачайте напрямую и играйте без интернета.</p>
   <div class="hero-btns">
     <a href="#apps" class="btn-primary btn">Посмотреть приложения</a>
     <a href="https://github.com/IlyaSigma111" class="btn-secondary btn">GitHub</a>
@@ -155,50 +158,72 @@ footer a:hover{color:#e8e8f0}
 <div class="section-inner">
   <div class="section-label">Каталог</div>
   <h2 class="section-title">Приложения QuizKit</h2>
-  <p class="section-desc">Каждое приложение — самостоятельная игра. Скачивайте отдельно и пользуйтесь без интернета.</p>
+  <p class="section-desc">Каждое приложение — самостоятельная игра. Скачивайте напрямую и пользуйтесь без интернета.</p>
   <div class="apps-grid">
-    <a href="https://github.com/IlyaSigma111/quizkit" class="app-card glass primary" style="text-decoration:none">
-      <div class="app-icon purple">📚</div>
-      <div class="app-name">ИльЯкласс</div>
-      <div class="app-desc">Викторины и проверочные работы в классе. Учитель запускает .exe — ученики подключаются по QR и отвечают в браузере.</div>
+
+    <div class="app-card glass primary">
+      <div class="app-card-top">
+        <div class="app-icon purple">📚</div>
+        <div class="app-info">
+          <div class="app-name">ИльЯкласс</div>
+          <div class="app-version">v0.6.8</div>
+          <div class="app-desc">Викторины и проверочные работы в классе. Учитель запускает .exe — ученики подключаются по QR и отвечают в браузере.</div>
+        </div>
+      </div>
       <div class="app-tags">
         <span class="app-tag">Класс</span>
         <span class="app-tag">QR-код</span>
         <span class="app-tag">Проверка знаний</span>
       </div>
-      <div class="app-actions">
-        <span class="app-btn app-btn-primary">v0.6.8</span>
-        <span class="app-vers">Windows • портативная</span>
+      <div class="app-dl">
+        <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/ilya-klass.exe" class="app-dl-portable">📦 Портативная <span class="app-dl-size">~10 МБ</span></a>
+        <a href="https://github.com/IlyaSigma111/quizkit/releases/download/v0.6.8/IlyaKlass_0.6.8_x64-setup.exe" class="app-dl-setup primary">⚙️ Установщик</a>
       </div>
-    </a>
-    <a href="https://github.com/IlyaSigma111/svoya-igra" class="app-card glass rose" style="text-decoration:none">
-      <div class="app-icon rose">🎯</div>
-      <div class="app-name">Своя Игра</div>
-      <div class="app-desc">Классическая Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор и полноэкранный режим.</div>
+      <a href="https://github.com/IlyaSigma111/quizkit" class="app-gh-link">GitHub →</a>
+    </div>
+
+    <div class="app-card glass rose">
+      <div class="app-card-top">
+        <div class="app-icon rose">🎯</div>
+        <div class="app-info">
+          <div class="app-name">Своя Игра</div>
+          <div class="app-version">v0.4.0</div>
+          <div class="app-desc">Классическая Jeopardy-викторина: поле 5×5, 1000+ шаблонов, до 6 игроков, редактор и полноэкранный режим.</div>
+        </div>
+      </div>
       <div class="app-tags">
         <span class="app-tag">Jeopardy</span>
         <span class="app-tag">1000+ шаблонов</span>
         <span class="app-tag">До 6 игроков</span>
       </div>
-      <div class="app-actions">
-        <span class="app-btn app-btn-rose">v0.4.0</span>
-        <span class="app-vers">Windows • установщик / exe</span>
+      <div class="app-dl">
+        <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">📦 Портативная <span class="app-dl-size">~6 МБ</span></a>
+        <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup rose">⚙️ Установщик</a>
       </div>
-    </a>
-    <a href="https://github.com/IlyaSigma111/svoya-igra" class="app-card glass amber" style="text-decoration:none">
-      <div class="app-icon amber">💰</div>
-      <div class="app-name">Кто хочет стать миллионером</div>
-      <div class="app-desc">15 вопросов с нарастающей сложностью, подсказка 50:50, несгораемые суммы и лестница призов. Режим «Своей Игры».</div>
+      <a href="https://github.com/IlyaSigma111/svoya-igra" class="app-gh-link">GitHub →</a>
+    </div>
+
+    <div class="app-card glass amber">
+      <div class="app-card-top">
+        <div class="app-icon amber">💰</div>
+        <div class="app-info">
+          <div class="app-name">Кто хочет стать миллионером</div>
+          <div class="app-version">v0.4.0 (в составе «Своей Игры»)</div>
+          <div class="app-desc">15 вопросов с нарастающей сложностью, подсказка 50:50, несгораемые суммы и лестница призов. Режим внутри «Своей Игры».</div>
+        </div>
+      </div>
       <div class="app-tags">
         <span class="app-tag">Миллионер</span>
         <span class="app-tag">50:50</span>
         <span class="app-tag">Одиночный / Группа</span>
       </div>
-      <div class="app-actions">
-        <span class="app-btn app-btn-amber">v0.4.0</span>
-        <span class="app-vers">В составе «Своей Игры»</span>
+      <div class="app-dl">
+        <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/svoya-igra.exe" class="app-dl-portable">📦 Портативная <span class="app-dl-size">~6 МБ</span></a>
+        <a href="https://github.com/IlyaSigma111/svoya-igra/releases/download/v0.4.0/SvoyaIgra_0.4.0_x64-setup.exe" class="app-dl-setup amber">⚙️ Установщик</a>
       </div>
-    </a>
+      <a href="https://github.com/IlyaSigma111/svoya-igra" class="app-gh-link">GitHub →</a>
+    </div>
+
   </div>
 </div>
 </section>
@@ -210,7 +235,7 @@ footer a:hover{color:#e8e8f0}
   <div class="faq-list">
     <div class="faq-item"><button class="faq-q">Сколько это стоит? <span class="arrow">▼</span></button><div class="faq-a">Всё бесплатно. Все приложения с открытым исходным кодом — скачивайте, используйте, изменяйте.</div></div>
     <div class="faq-item"><button class="faq-q">Нужен ли интернет? <span class="arrow">▼</span></button><div class="faq-a">«Своя Игра» и «Миллионер» работают полностью офлайн. «ИльЯкласс» создаёт локальную сеть — интернет нужен только ученикам для подключения по QR.</div></div>
-    <div class="faq-item"><button class="faq-q">Как скачать игру? <span class="arrow">▼</span></button><div class="faq-a">Кликните на карточку приложения — перейдёте на GitHub. Там нажмите «Releases» (справа), выберите последнюю версию и скачайте .exe.</div></div>
+    <div class="faq-item"><button class="faq-q">Чем отличается портативная версия от установщика? <span class="arrow">▼</span></button><div class="faq-a">Портативная — один .exe, запускается сразу с любого места (флешка, папка). Установщик — прописывает иконку в меню Пуск, ассоциации файлов. Функционально одинаковы.</div></div>
     <div class="faq-item"><button class="faq-q">Будет ли версия для macOS или Linux? <span class="arrow">▼</span></button><div class="faq-a">Планируется. Пока все приложения собраны только под Windows (x64).</div></div>
   </div>
 </div>
